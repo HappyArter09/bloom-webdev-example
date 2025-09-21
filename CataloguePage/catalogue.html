@@ -9,41 +9,57 @@
         <!-- this entire thing is for flexbox demonstration -->
 
         <h1>MVRT Catalogue</h1>
-
+        <script src="cataloguescript.js"></script>
         <div class="gallery">
             <div class="gallery-item">
                 <p>Ball Bearings</p>
                 <img src="CatalogueImgs/BallBearing.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Ball Bearing')">Add to Cart</button>
             </div>
             <div class="gallery-item">
                 <p>Kraken Motors</p>
                 <img src="CatalogueImgs/KrakenMotors.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Kraken Motors')">Add to Cart</button>
             </div>
             <div class="gallery-item">
                 <p>Omni Wheels</p>
                 <img src="CatalogueImgs/OmniWheels.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Omniwheels')">Add to Cart</button>
             </div>
             <div class="gallery-item">
                 <p>Pocketed Gears</p>
                 <img src="CatalogueImgs/PocketedGears.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Pocketed Gears')">Add to Cart</button>
             </div>
             <div class="gallery-item">
                 <p>Limelight Camera</p>
                 <img src="CatalogueImgs/VisionCamera.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Limelight Camera')">Add to Cart</button>
             </div>
             <div class="gallery-item">
                 <p>Wheel Treads</p>
                 <img src="CatalogueImgs/WheelTreads.png" class="gallery-img"><br>
-                <button>Add to Cart</button>
+                <button onclick="addToCart('Wheel Treads')">Add to Cart</button>
             </div>
         </div>
 
-        <p><a href="../CheckoutPage/checkoutpage.html">Checkout</a></p>
+       
+        <h1>Checkout</h1>
+
+        <h2>Cart</h2>
+        <ul id="cartUl">
+        </ul>
+
+        <form action="../index.html">
+            <label for="name">Name (Last, First)</label>
+            <input type="text" placeholder="John Doe" required><br><br>
+            <label for="email">Email</label>
+            <input type="email" placeholder="example123@gmail.com"><br><br>
+            <label for="confirmation">Confirm that you want to purchase all listed items</label>
+            <input type="checkbox" name="Confirm" required><br><br>
+            <button type="submit" onclick="clearCart()">Finish</button>
+        </form>
+
         <p><a href="../index.html">Back to main page</a></p>
     </body>
 </html>
